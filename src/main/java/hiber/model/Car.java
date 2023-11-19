@@ -16,7 +16,7 @@ public class Car {
     }
 
     @Id
-   @Column(name = "user_id")
+    @Column(name = "user_id")
     private long id;
 
     @OneToOne
@@ -28,8 +28,9 @@ public class Car {
         return user;
     }
 
-    public void setUser(User user) {
+    public User setUser(User user) {
         this.user = user;
+        return user;
     }
 
     @Column(name = "model")
@@ -37,7 +38,6 @@ public class Car {
 
     @Column(name = "series")
     private int series;
-
 
 
     public long getId() {
@@ -66,10 +66,8 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car{" +
-                "id=" + id +
-                ", model='" + model + '\'' +
-                ", series=" + series +
-                '}';
+        return "Car " +
+                "model is - '" + model + '\'' +
+                ", series=" + series;
     }
 }

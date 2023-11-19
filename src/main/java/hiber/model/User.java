@@ -14,8 +14,9 @@ public class User {
         return car;
     }
 
-    public void setCar(Car car) {
+    public Car setCar(Car car) {
         this.car = car;
+        return car;
     }
 
     @Id
