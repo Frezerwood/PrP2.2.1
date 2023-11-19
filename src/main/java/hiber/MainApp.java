@@ -35,13 +35,9 @@ public class MainApp {
             System.out.println("Name is - " + user.getFirstName() + " " + user.getLastName() + " " + user.getCar());
         }
 
-        // System.out.println(userService.);
-
-//      userService.add(new User("User1", "Lastname1", "user1@mail.ru"));
-//      userService.add(new User("User2", "Lastname2", "user2@mail.ru"));
-//      userService.add(new User("User3", "Lastname3", "user3@mail.ru"));
-//      userService.add(new User("User4", "Lastname4", "user4@mail.ru"));йq
-
+        System.out.println("----------------------------------------");
+        System.out.println("User last name is " + userService.getUserByCar("MOD", 123).getLastName());
+        System.out.println("----------------------------------------");
 
         List<User> users = userService.listUsers();
         for (User user : users) {
